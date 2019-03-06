@@ -1,0 +1,7 @@
+main {
+    display:flex;
+}
+
+.profile-section {
+    flex: 1;
+}
