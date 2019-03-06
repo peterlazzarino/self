@@ -2,37 +2,74 @@
 <html lang="en">
     <head>
         <title>Peter Lazzarino</title>
-        <link rel="stylesheet" type="text/css" href="index.css"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1" >
+        <style>
+            body {
+                padding: 25px 15px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 18px;
+                line-height: 27px;
+                background-color: #fafafa;
+                min-width: 320px;
+            }
+            #doc {
+                max-width: 950px;
+                margin: auto;
+            }
+            .path-logo {
+                width: 80px;
+                padding: 5px;
+                margin-left: 5px;
+            }
+            main {
+                display: flex;
+            }
+            .about-text {
+                display: flex;
+                align-items: center;
+            }
+            .profile-section {
+                flex: 1;
+            }
+            .content {
+                padding-top: 10px;
+            }
+            @media screen and (max-width: 750px) {
+                main {
+                    flex-direction: column;
+                }
+            }
+        </style>
     </head>
     <body>
         <div id="doc">
             <header>
                 <h1>Peter Lazzarino</h1>
-                <p>Director of Design Engineering @ <a href="https://www.pathai.com/">PathAI</a></p>
-                <a href="https://www.instagram.com/goodluckpete/?hl=en">insta</a> |
-                <a href="www.linkedin.com/in/peter-lazzarino">linkedin</a> |
-                <a href="https://www.last.fm/user/supercoupe94/listening-report/month">what im listening to 🤘</a> |
-                <a mailto="peter.lazzarino@gmail.com">email me</a>
+                <p class="about-text"><span>Director of Design Engineering @ </span><img class="path-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAAAuCAMAAADX9uFnAAABCFBMVEUAAAAzNTM0NDQyMjLXIDDXJDAwODDPIDA0NTTXJDTXIzLYIzHYIjHYIzLZIzIwMDDXIjIwMDA1NTXXIzE0NTQzNDPWIjLYIjLZIjI0NDQ0NDTYIzLUJTA0NDQ1NTXYIjLXIzDYIjIzNTMzNTPYIjHYIzE0NTQzNTPXIzLXJDLYIjPYIzM4ODjWIzA0NjQzMzMzMzMzNjMyNTIwQDDYIzLYIjLXIzHZIzA0NjQwNTDWIzMzNTPYJDI0NDTWIjLaIjLWJDDXITHYIDTYJDIzNjM0NjQyNDLZIzM0NDQ0NDTWJDLYIjA0NjTYIzLaJTDWIzIwNDDWIzHYIzM1NTU1NzU0NDQ0NTTYIzJeMsv6AAAAVnRSTlMA30BgIEAgEL9A77/fn+8ggBAwoM/vkN9/v4DfMK+fcGDPb5DP3++gYIBvvyBQf5BQX2AQr5DvX7AwUJ9wT3CPcKBPz1CAcF9wz3Bvr5AwkECwr2Bvf8f4pWUAAAOWSURBVHjaxdhnV+pMFIbhZ1JITAi9g3RF7B4951hO72/ve///f/I6KQyEQPQDcH2SZGnuNbPXxAXirMaAeeAZ2JFjhwMN7MLegGfa37Ft1nte4Bk7Wn2lsc3VP+EE7U87Wn3FM3az+kqusaPVV9omNuqI47Y9jH2H0/SwUQWOG/c7Zy7PMfBcTfEWT2VwzA1wCvzGSg2BjAjZIw0Jilp0WZCOBD/XbzDTqQ8g7XGMka+QyFsOz+SiAFIeiliiEa0PqDObavyZIT8ZWV7g4oKIbvGRFWsWoPtagujX5wfch6upAvjvWi9e4GJCRPZCgDELQKhFpD07oMxjzlkLAY9eo+Ow8uqN/Dt0hZO1AWjSbWpAsRifNsPhT/GA3O/oc+TgFxmotS5xz+sDdBJA/tyuElHl3zyAoV0hsh+VZMC3oX/Lvpo/c8YosBsP4LaBabj6JmAd13t4dJMSoMmfWxQSJWBCIU0GzJyrEZSrzWzFA2TBmdHP+o9vOPLCSQHvUgMOgR/Nka5plxMiUcSf+kUwpBk/QMhbQ0GkqQcagMuFpQAeyygreryUsyxnfcAPqmCmRPQ1NgNf4StWyJ6NoAfgHeeWA3LBhTIrPRTWBuQFjaBckB0fQrVSxWgETQCWw+aKAIfnDGCsC9AEVTNQLulwRUCR6DQcwQNIL9lVAfOvm2NeYMJNCrAlIef7C6TTYdcWtr1PtCIA0RB8Ds8gk9lSARHvqMaLXJhJAZHmnb8RNoVSAzrMR3s+hwsqYA0L2Wx2KUD3XV5Hg0DNkTyaJ6kBZVYGTwroQTLLSzOgTKiqhXdSA+qL+5se8If6j2VlgKArPClAjaDkci09YOpPmD+/5soAotJTA07YQ8TknJUWMAbwpUIkzgEUVgUc0lsEtJQA/xCIWA730gJM4D/ydeUvrAhoUiU/f97dEeWTA8pqB4KjICXgAMjPvVpeWskBpUMSD7qmj6rhZjx+HurnpXhA8B5STGYzCPjMyf4CXlDoFjCRHICSoED1H0jfSNKXAu6jMVJjGAQUOFlt7uUqAAuBYreLmBf7PwmxP7ye+7ifAVrdEkLdbgZ97w3mnXkFwPI8OQ6JPOCCQhVs0gdO5AIahR6wUVNOkrOAZri7GWxWJ8sJCkBG+M+/w8Z9SEjIGf5E7beusQVGmZe0DWyR2oeU78m2ug+vXkPZwT64BrbtbG4RDkzswtQJV39qYTeM8pg5WzOwJf8DO5cdT518hn8AAAAASUVORK5CYII="/></p>
+                <br />
+                <a target="_blank" href="https://www.instagram.com/goodluckpete/?hl=en">instagram</a> |
+                <a target="_blank" href="https://www.linkedin.com/in/peter-lazzarino">linkedin</a> |
+                <a target="_blank" href="https://www.last.fm/user/supercoupe94/listening-report/month">what im listening to 🤘</a> |
+                <a href="mailto:peter.lazzarino@gmail.com">say hello</a>
             </header>
-            <hr />
+            <br />
             <main>
                 <section class="profile-section">
-                    <h2>Web Dev</h2>
-                    <section>
-                        <h3>Posts</h3>
+                    <h2>Web Dev 👨‍💻</h2>
+                    <section class="content">
+                        <h3>Blog Posts</h3>
                         <article>
-                            <a href="https://medium.com/collegevine-engineering/building-an-extendable-atomic-design-ui-with-styled-components-and-react-7b59638ff6ac">
+                            <a target="_blank" href="https://medium.com/collegevine-engineering/building-an-extendable-atomic-design-ui-with-styled-components-and-react-7b59638ff6ac">
                                 React UI with atomic design + styled components
                             </a>                        
                         </article>
                         <article>
-                            <a href="https://medium.com/@peter.lazzarino/building-custom-personalized-a-b-test-experiences-with-react-and-evergage-fca52614a353">
+                            <a target="_blank" href="https://medium.com/@peter.lazzarino/building-custom-personalized-a-b-test-experiences-with-react-and-evergage-fca52614a353">
                                 A/B Testing with Evergage and React
                             </a>      
                         </article>
                         <article>
-                            <a href="https://medium.com/@peter.lazzarino/responsive-images-for-every-screen-size-with-react-stop-using-picture-srcset-and-media-for-47c6bd4fb4e6">
+                            <a target="_blank" href="https://medium.com/@peter.lazzarino/responsive-images-for-every-screen-size-with-react-stop-using-picture-srcset-and-media-for-47c6bd4fb4e6">
                                 Dynamically responsive images with React
                             </a>      
                         </article>
@@ -40,14 +77,20 @@
                     <section>
                         <h3>Personal projects</h3>
                         <article>
-                            <p><a href="https://github.com/peterlazzarino/react-controlled-ab"><code>react-controlled-ab</code></a> - Tool to run A/B tests using a homegrown UI library instead of visual editors provided by third party tools.</p>
+                            <p><a target="_blank" href="https://github.com/peterlazzarino/react-controlled-ab"><code>react-controlled-ab</code></a> - Tool to run A/B tests using a homegrown UI library instead of visual editors provided by third party tools.</p>
                         </article>
-                        <p>View more on <a href="https://github.com/peterlazzarino">Github!</a></p>
+                        <article>
+                            <p><a target="_blank" href="https://github.com/peterlazzarino/react-vr-geolocate"><code>react-vr-geolocate</code></a> - Map geolocations with customized pins and icons on a WebVR representation of the earth.</p>
+                        </article>
+                        <p>More on <a target="_blank" href="https://github.com/peterlazzarino">Github!</a></p>
                     </section>
                 </section>
                 <section class="profile-section">
-                    <h2>Photo</h2>    
-                    <p>📷 <a href="http://peterl.photo">Wedding Photography Portfolio</a></p>   
+                    <h2>Photo 📷</h2>    
+                    <section class="content">
+                        <p><a target="_blank" href="http://peterl.photo">Wedding Photography Portfolio</a></p> 
+                        <p><a target="_blank" href="https://www.facebook.com/peterlazzarinophoto/">Peter Lazzarino Photography FB page</a></p> 
+                    </section>
                 </section>
             </main>
         </div>
